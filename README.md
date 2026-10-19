@@ -1,6 +1,7 @@
 # Label efficiency in clinical trial risk prediction
 
-Code for the paper *Label Efficiency in Clinical Trial Risk Prediction: Comparing Supervised Learning, LLMs, and Decision-One Models*.
+Code for the paper
+*Label Efficiency in Clinical Trial Risk Prediction: Comparing Supervised Learning, LLMs, and Decision-One Models*.
 
 We compare XGBoost, trained with label budgets from 25 to 12,800 clinical trials (CTs), with four models used without task-specific training: Qwen3.5-397B, Jev, Kev-9B and Kev-0.8B. The task is predicting dosing-error risk in CTs registered on ClinicalTrials.gov. Discrimination is assessed with the AUROC and calibration with the Brier skill score after Platt scaling.
 
@@ -34,8 +35,8 @@ We compare XGBoost, trained with label budgets from 25 to 12,800 clinical trials
 Tested with Python 3.12.
 
 ```bash
-git clone <repository URL>
-cd <repository>
+git clone https://github.com/ds4dh/zero-shot-vs-supervised-ct-risk.git
+cd zero-shot-vs-supervised-ct-risk
 pip install -r requirements.txt
 ```
 
