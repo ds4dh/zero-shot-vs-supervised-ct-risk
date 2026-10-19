@@ -1,0 +1,7 @@
+{
+  "model": "jev",
+  "version": "1.13.0",
+  "label": "wilson_label",
+  "question": "This is a clinical trial registration, written before the trial started. Predict whether the completed trial will report dosing errors. Dosing errors are medication errors reported as adverse events: overdose, underdose, wrong dose, wrong drug, incorrect route or administration, or dosing schedule errors. Formally, the answer is yes if the lower bound of the 95% Wilson score confidence interval of the dosing-error rate (reported dosing-error events divided by participants at risk, summed over all arms) exceeds 0.01%. About 1 in 20 completed trials meet this criterion.",
+  "prompt_version": "v1"
+}

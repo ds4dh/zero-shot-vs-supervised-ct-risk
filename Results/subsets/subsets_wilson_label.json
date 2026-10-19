@@ -1,0 +1,20 @@
+{
+  "sample_sizes": [
+    25,
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400,
+    12800
+  ],
+  "n_repeats_small": 30,
+  "n_repeats_large": 10,
+  "small_sample_threshold": 800,
+  "train_fraction": 0.8,
+  "random_seed": 42,
+  "labelled_ids_sha256": "0ee9e7593d4db0113826a021f53d0c2cd1aef7eb90f01994bbd6f54a14f11368"
+}
