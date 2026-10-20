@@ -2,7 +2,7 @@
   "random_seed": 42,
   "label": "wilson_label",
   "debug_n": null,
-  "models": "qwen3.5-397b",
+  "models": "qwen3.8-flash-next",
   "sample_list": [
     25,
     50,
@@ -19,6 +19,6 @@
   "n_repeats_large": 10,
   "small_sample_threshold": 800,
   "train_fraction": 0.8,
-  "model": "qwen3.5-397b",
-  "timestamp": "2026-10-14T22:03:30.214973"
+  "model": "qwen3.8-flash-next",
+  "timestamp": "2026-10-20T08:21:36.812449"
 }

@@ -189,7 +189,7 @@ class ZeroShotModel:
     def _build_predictor(self, config):
         """Dispatch to the model-specific function: predict_batch(cts) -> list of P(yes)."""
         spec = ZERO_SHOT_MODELS[self.name]
-        if self.name == "qwen3.5-397b":
+        if self.name == "qwen3.8-flash-next":
             return build_qwen_predictor(spec, config.label)
         elif self.name == 'jev':
             return build_jev_predictor(spec, config.label)

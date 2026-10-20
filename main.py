@@ -26,8 +26,8 @@ def parse_args():
     parser.add_argument("--debug_n", type=int, default=None, help="Keep only n CTs per split (debugging).")
 
     # model
-    parser.add_argument('--models', type=str, choices=['XGBoost', 'qwen3.5-397b', 
-                                                       'jev', 'kev-0.8b', 'kev-9b'], default='qwen3.5-397b',
+    parser.add_argument('--models', type=str, choices=['XGBoost', 'qwen3.8-flash-next', 
+                                                       'jev', 'kev-0.8b', 'kev-9b'], default='qwen3.8-flash-next',
                         help='The model to use for experiments.')
 
     # sampling parameters
@@ -148,10 +148,10 @@ def main():
     # construct the model
     if parser.models == 'XGBoost':
         model = XGBoostModel(param=parser, dataset=dataset, n_trials=100)
-    elif parser.models == 'qwen3.5-397b' or parser.models == 'jev' or parser.models == 'kev-0.8b' or parser.models=='kev-9b':
+    elif parser.models == 'qwen3.8-flash-next' or parser.models == 'jev' or parser.models == 'kev-0.8b' or parser.models=='kev-9b':
         model = ZeroShotModel(config=parser, dataset=dataset)
     else:
-        raise NotImplementedError('Currently only: XGBoost, qwen3.5-397b, jev, kev-0.8b, kev-9b is supported.')
+        raise NotImplementedError('Currently only: XGBoost, qwen3.8-flash-next, jev, kev-0.8b, kev-9b is supported.')
 
     # run the experiment
     plan = load_or_create_subsets(dataset=dataset, config=parser, sample_sizes=parser.sample_list, label=parser.label)

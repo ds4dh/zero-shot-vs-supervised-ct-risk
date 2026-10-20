@@ -50,12 +50,12 @@ ZERO_SHOT_MODELS = {
         "api_key_env": "TYPESAFE_API_KEY",
         "fingerprint": {"model": "jev", "version": "1.13.0"},
     },
-    "qwen3.5-397b": {
+    "qwen3.8-flash-next": {
         "backend": "qwen_logprobs",
-        "base_url": 'https://ds4dh.unige.ch/vllm/v1',  # vLLM server on Baobab
-        "model": "qwen3.5-397b",            
+        "base_url": 'https://ds4dh.unige.ch/vllm/v1',  # vLLM server
+        "model": "Qwen/Qwen3.8-Flash-Next-FP8",            
         "api_key_env": "DS4DH_VLLM_API_KEY",
-        "fingerprint": {"model": "Qwen/Qwen3.5-397B",
+        "fingerprint": {"model": "Qwen/Qwen3.8-Flash-Next-FP8",
                         "thinking": False, "top_logprobs": 20},
     },
 }

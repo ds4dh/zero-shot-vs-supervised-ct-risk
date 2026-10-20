@@ -1,5 +1,5 @@
 {
-  "model": "Qwen/Qwen3.5-397B",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
   "thinking": false,
   "top_logprobs": 20,
   "label": "wilson_label",

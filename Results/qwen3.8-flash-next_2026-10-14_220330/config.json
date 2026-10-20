@@ -1,0 +1,24 @@
+{
+  "random_seed": 42,
+  "label": "wilson_label",
+  "debug_n": null,
+  "models": "qwen3.5-397b",
+  "sample_list": [
+    25,
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400,
+    12800
+  ],
+  "n_repeats_small": 30,
+  "n_repeats_large": 10,
+  "small_sample_threshold": 800,
+  "train_fraction": 0.8,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "timestamp": "2026-10-14T22:03:30.214973"
+}
