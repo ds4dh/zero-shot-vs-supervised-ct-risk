@@ -1,9 +1,9 @@
 # Label efficiency in clinical trial risk prediction
 
 Code for the paper
-*Label Efficiency in Clinical Trial Risk Prediction: Comparing Supervised Learning, LLMs, and Decision-One Models*.
+*Label Efficiency in Clinical Trial Risk Prediction: Comparing Supervised Learning, LLMs, and System One Models*.
 
-We compare XGBoost, trained with label budgets from 25 to 12,800 clinical trials (CTs), with four models used without task-specific training: Qwen3.5-397B, Jev, Kev-9B and Kev-0.8B. The task is predicting dosing-error risk in CTs registered on ClinicalTrials.gov. Discrimination is assessed with the AUROC and calibration with the Brier skill score after Platt scaling.
+We compare XGBoost, trained with label budgets from 25 to 12,800 clinical trials (CTs), with four models used without task-specific training: Qwen3.8-Flash-Next-FP8, Jev, Kev-9B and Kev-0.8B. The task is predicting dosing-error risk in CTs registered on ClinicalTrials.gov. Discrimination is assessed with the AUROC and calibration with the Brier skill score after Platt scaling.
 
 ## Repository structure
 
@@ -16,7 +16,7 @@ We compare XGBoost, trained with label budgets from 25 to 12,800 clinical trials
 ├── utils.py              # Data loading and evaluation utilities
 ├── ourXGBoost.py         # XGBoost with Optuna hyperparameter search
 ├── ZeroShot.py           # Common interface for zero-shot models, with score caching
-├── Qwen.py               # Qwen3.5-397B (self-hosted)
+├── Qwen.py               # Qwen3.8-Flash-Next-FP8 (self-hosted)
 ├── jev.py                # Jev (public API)
 ├── kev_predictor.py      # Kev-9B and Kev-0.8B (self-hosted)
 ├── prompts.py            # Prompts and questions given to the zero-shot models
@@ -58,9 +58,9 @@ export DATASETS_ROOT=/path/to/datasets
 
 Each zero-shot model is configured in `ZERO_SHOT_MODELS` (`constants.py`) by the URL of its server (`base_url`) and, if required, the environment variable holding its API key (`api_key_env`).
 
-- **Qwen3.5-397B**: requires access to a server hosting the model. Adapt its entry in `ZERO_SHOT_MODELS` to your setup; the server must return token log-probabilities.
+- **Qwen3.8-Flash-Next-FP8**: requires access to a server hosting the model. Adapt its entry in `ZERO_SHOT_MODELS` to your setup; the server must return token log-probabilities.
 - **Jev** (version 1.13.0): accessed through the public TypeSafe API. Export your API key with `export TYPESAFE_API_KEY=...`.
-- **Kev-9B and Kev-0.8B**: served locally on port 8009 from Hugging Face weights (revisions `db029f08b290afd9fee4aa4bbcd9ae48602d1eb0` and `<hash>`). We used a single GPU with 24 GB of memory. `run_kev.sh` starts the server and runs the predictions.
+- **Kev-9B and Kev-0.8B**: served locally on port 8009 from Hugging Face weights. We used a single GPU with 24 GB of memory. `run_kev.sh` starts the server and runs the predictions.
 
 ### Running experiments
 
